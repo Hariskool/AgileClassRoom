@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgileClassRoom", "AgileClassRoom\AgileClassRoom.csproj", "{0670F1D7-D3B2-4B3E-9150-32983AFB925E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C3D1EB0E-1844-47CC-A667-87269E496FA5} = {C3D1EB0E-1844-47CC-A667-87269E496FA5}
+		{EEE8DA66-0EAA-4735-B7B9-D2C0F7344F5E} = {EEE8DA66-0EAA-4735-B7B9-D2C0F7344F5E}
+		{7EEE60F5-8EDC-4CBE-B037-C80B89C6CA1B} = {7EEE60F5-8EDC-4CBE-B037-C80B89C6CA1B}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgileClassRoom.Concrete", "AgileClassRoom.Concrete\AgileClassRoom.Concrete.csproj", "{0219BC89-965B-40EA-B530-241B59BEEB9F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgileClassRoom.Interface", "AgileClassRoom.Interface\AgileClassRoom.Interface.csproj", "{EEE8DA66-0EAA-4735-B7B9-D2C0F7344F5E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgileClassRoom.Models", "AgileClassRoom.Models\AgileClassRoom.Models.csproj", "{7EEE60F5-8EDC-4CBE-B037-C80B89C6CA1B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgileClassRoom.ViewModel", "AgileClassRoom.ViewModel\AgileClassRoom.ViewModel.csproj", "{C3D1EB0E-1844-47CC-A667-87269E496FA5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0670F1D7-D3B2-4B3E-9150-32983AFB925E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0670F1D7-D3B2-4B3E-9150-32983AFB925E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0670F1D7-D3B2-4B3E-9150-32983AFB925E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0670F1D7-D3B2-4B3E-9150-32983AFB925E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0219BC89-965B-40EA-B530-241B59BEEB9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0219BC89-965B-40EA-B530-241B59BEEB9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0219BC89-965B-40EA-B530-241B59BEEB9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0219BC89-965B-40EA-B530-241B59BEEB9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEE8DA66-0EAA-4735-B7B9-D2C0F7344F5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEE8DA66-0EAA-4735-B7B9-D2C0F7344F5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEE8DA66-0EAA-4735-B7B9-D2C0F7344F5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEE8DA66-0EAA-4735-B7B9-D2C0F7344F5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EEE60F5-8EDC-4CBE-B037-C80B89C6CA1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EEE60F5-8EDC-4CBE-B037-C80B89C6CA1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EEE60F5-8EDC-4CBE-B037-C80B89C6CA1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EEE60F5-8EDC-4CBE-B037-C80B89C6CA1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3D1EB0E-1844-47CC-A667-87269E496FA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3D1EB0E-1844-47CC-A667-87269E496FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3D1EB0E-1844-47CC-A667-87269E496FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3D1EB0E-1844-47CC-A667-87269E496FA5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6BA1F184-8144-484F-9BFF-B9A196000DC3}
+	EndGlobalSection
+EndGlobal
