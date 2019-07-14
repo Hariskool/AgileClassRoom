@@ -13,7 +13,10 @@ namespace AgileClassRoom.Interface
         TeacherViewModel GetTeacherbyId(int TeacherId);
         bool DeleteTeacher(int teacherId);
         bool UpdateTeacher(Teacher teacher);
+        int GetTeacherId(int id);
+      
         List<TeacherViewModel> GetAllTeacher(int userId);
+        List<RegisteredStudentViewModel> GetAllStudentsOfTeacher(int userId);
         List<TeacherViewModel> GetAllTeachersOfCoordinator(int id);
     }
 }

@@ -114,6 +114,7 @@ namespace AgileClassRoom.Concrete
 
                           select new SectionViewModel
                           {
+                              CourseID=course.CourseID,
                               CourseName = course.CourseName,
                               SectionID = section.SectionID,
                               SectionNo = section.SectionNo,

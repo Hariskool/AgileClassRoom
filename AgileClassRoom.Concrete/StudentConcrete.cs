@@ -144,5 +144,27 @@ namespace AgileClassRoom.Concrete
 
             return result;
         }
+        public List<StudentViewModel> GetAllStudentbycourse(int courseId,int userId)
+        {
+            var findUser = (from coordinator in _context.Coordinator
+                            join user in _context.Users on coordinator.UserId equals user.UserId
+                            where user.UserId == userId
+                            select coordinator.CoordinatorId).FirstOrDefault();
+            int coorId = Convert.ToInt32(findUser);
+
+            var result = (from student in _context.Student
+                          join user in _context.Users on student.UserID equals user.UserId
+                          where student.CreatedBy == coorId
+                          select new StudentViewModel
+                          {
+                              StudentId = student.StudentID,
+                              UserId = user.UserId,
+                              FullName = user.FullName,
+                             
+                          }
+                          ).ToList();
+
+            return result;
+        }
     }
 }

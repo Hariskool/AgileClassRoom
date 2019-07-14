@@ -6,15 +6,19 @@ using System.Text;
 
 namespace AgileClassRoom.Models
 {
-    [Table("Groups")]
-    public class Groups
+   
+    [Table("Assessment")]
+    public class Assessment
     {
         [Key]
-        public int groupId { get; set; }
-        public int groupNo { get; set; }
-        public int totalMember { get; set; }
-        public int sectionId { get; set; }
+        public int assessmentId { get; set; }
+        public string assessmentName { get; set;}
+        public int totalMarks { get; set; }
+        public DateTime createdDate { get; set; }
+
         public int createdBy { get; set; }
+ 
+        
 
     }
 }

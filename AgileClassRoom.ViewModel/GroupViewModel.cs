@@ -1,20 +1,17 @@
-﻿using System;
+﻿using AgileClassRoom.Models;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace AgileClassRoom.Models
+namespace AgileClassRoom.ViewModel
 {
-    [Table("Groups")]
-    public class Groups
+    public class GroupViewModel
     {
-        [Key]
         public int groupId { get; set; }
         public int groupNo { get; set; }
         public int totalMember { get; set; }
         public int sectionId { get; set; }
         public int createdBy { get; set; }
-
+        public IEnumerable<GroupMembers>groupMembers { get; set; }
     }
 }

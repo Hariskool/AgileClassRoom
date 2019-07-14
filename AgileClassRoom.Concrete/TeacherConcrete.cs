@@ -134,6 +134,39 @@ namespace AgileClassRoom.Concrete
 
             return result;
         }
+        
+            public List<RegisteredStudentViewModel> GetAllStudentsOfTeacher(int userId) {
+            var findUser = (from teacher in _context.Teacher
+                            join user in _context.Users on teacher.UserID equals user.UserId
+                            where user.UserId == userId
+                            select teacher.TeacherID).FirstOrDefault();
+
+            int teachId = Convert.ToInt32(findUser);
+
+            var result = (from student in _context.Student
+                          join user in _context.Users on student.UserID equals user.UserId
+                          join enrolment in _context.Enrolment on student.StudentID equals enrolment.StudentID
+                          join section in _context.Section on enrolment.SectionID equals section.SectionID
+                          join course in _context.Course on section.CourseID equals course.CourseID
+                          join teacher in _context.Teacher on section.TeacherID equals teacher.TeacherID
+
+                          where section.TeacherID == teachId
+                          select new RegisteredStudentViewModel
+                          {
+                              FullName =user.FullName,
+                              EmailId = user.EmailId,
+                              Contactno = user.Contactno,
+                              CourseName = course.CourseName,
+                              SectionNo  = section.SectionNo,
+                              Cgpa       = student.Cgpa,
+                              Semester = student.Semester
+      
+    }
+                          ).ToList();
+            return result;
+
+        }
+
         public List<TeacherViewModel> GetAllTeacher(int userId)
         {
             var findUser = (from coordinator in _context.Coordinator
@@ -163,5 +196,6 @@ namespace AgileClassRoom.Concrete
 
             return result;
         }
+       
     }
 }

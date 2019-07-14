@@ -84,8 +84,14 @@ namespace AgileClassRoom
             services.AddTransient<ICourse, CourseConcrete>();
             services.AddTransient<ITeacher, TeacherConcrete>();
             services.AddTransient<ISection, SectionConcrete>();
-            //services.AddTransient<IEnrolment, Enr>();
+            services.AddTransient<IEnrolment, EnrolmentConcrete>();
             services.AddTransient<IStudent, StudentConcrete>();
+            services.AddTransient<IProject, ProjectConcrete>();
+            services.AddTransient<IAssessment, AssessmentConcrete>();
+            services.AddTransient<IAssignProject, AssignProjectConcrete>();
+            services.AddTransient<IGroup, GroupConcrete>();
+            services.AddTransient<IGroupMember, GroupMemberConcrete>();
+            services.AddTransient<IDashBoard, DashboardConcrete>();
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
             services.AddScoped<IUrlHelper>(implementationFactory =>
             {

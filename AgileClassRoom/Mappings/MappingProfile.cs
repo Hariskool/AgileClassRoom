@@ -97,6 +97,29 @@ namespace AgileClassRoom.Mappings
                             .ForMember(dest => dest.NotificationId, opt => opt.MapFrom(src => src.NotificationId))
                             .ForMember(dest => dest.Createddate, opt => opt.MapFrom(src => src.Createddate))
                             .ForMember(dest => dest.Message, opt => opt.MapFrom(src => src.Message));
+            CreateMap<ProjectViewModel, Project>()
+                           .ForMember(dest => dest.projectId, opt => opt.MapFrom(src => src.projectId))
+                           .ForMember(dest => dest.name, opt => opt.MapFrom(src => src.name))
+                           .ForMember(dest => dest.IssueDate, opt => opt.MapFrom(src => src.IssueDate))
+                           .ForMember(dest => dest.EndDate, opt => opt.MapFrom(src => src.EndDate))
+                           .ForMember(dest => dest.description, opt => opt.MapFrom(src => src.description))
+                           .ForMember(dest => dest.assessmentId, opt => opt.MapFrom(src => src.assessmentId));
+            CreateMap<AssignProjectViewModel, AssignProject>()
+                          .ForMember(dest => dest.projectId, opt => opt.MapFrom(src => src.projectId))
+                         .ForMember(dest => dest.courseId, opt => opt.MapFrom(src => src.courseId))
+                          .ForMember(dest => dest.sectionId, opt => opt.MapFrom(src => src.sectionId));
+
+            CreateMap<AnnoucementViewModel, Annoucement>()
+                            .ForMember(dest => dest.annoucementId, opt => opt.MapFrom(src => src.annoucementId))
+                            .ForMember(dest => dest.sectionId, opt => opt.MapFrom(src => src.sectionId))
+                            .ForMember(dest => dest.expireDate, opt => opt.MapFrom(src => src.expireDate))
+                            .ForMember(dest => dest.description, opt => opt.MapFrom(src => src.description));
+
+            CreateMap<EnrolViewModel, Enrolment>()
+                          .ForMember(dest => dest.EnrolmentID, opt => opt.MapFrom(src => src.EnrolmentID))
+                          .ForMember(dest => dest.SectionID, opt => opt.MapFrom(src => src.SectionID))
+                          .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
+                          .ForMember(dest => dest.StudentID, opt => opt.MapFrom(src => src.StudentID));
             CreateMap<SectionViewModel, Section>()
                           .ForMember(dest => dest.SectionID, opt => opt.MapFrom(src => src.SectionID))
                           .ForMember(dest => dest.SectionNo, opt => opt.MapFrom(src => src.SectionNo))

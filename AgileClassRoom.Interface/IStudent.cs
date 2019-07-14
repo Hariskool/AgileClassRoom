@@ -11,6 +11,7 @@ namespace AgileClassRoom.Interface
         void InsertStudent(Student student);
         bool CheckStudentExits(string studentEmail);
         StudentViewModel GetStudentbyId(int StudentId);
+        List<StudentViewModel> GetAllStudentbycourse(int coursId,int userId);
         bool DeleteStudent(int studentId);
         bool UpdateStudent(Student student);
         List<StudentViewModel> GetAllStudent(int userId);

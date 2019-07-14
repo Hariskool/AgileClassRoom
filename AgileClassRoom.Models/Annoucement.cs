@@ -6,13 +6,13 @@ using System.Text;
 
 namespace AgileClassRoom.Models
 {
-    [Table("Groups")]
-    public class Groups
+    [Table("Annoucement")]
+    public class Annoucement
     {
         [Key]
-        public int groupId { get; set; }
-        public int groupNo { get; set; }
-        public int totalMember { get; set; }
+        public int annoucementId { get; set; }
+        public DateTime? expireDate { get; set; }
+        public string description { get; set; }
         public int sectionId { get; set; }
         public int createdBy { get; set; }
 

@@ -9,10 +9,10 @@ namespace AgileClassRoom.Interface
     public interface IEnrolment
     {
         void InsertEnrolment(Enrolment enrolment);
-        bool CheckEnrolmentExits(int enrolId);
-        EnrolViewModel GetEnrolmentbyId(int sectionId);
-        bool DeleteEnrolment(int sectionId);
+        bool CheckEnrolmentExits(int studentId,int sectionId);
+        EnrolViewModel GetEnrolmentbyId(int enrolId);
+        bool DeleteEnrolment(int enrolId);
         bool UpdateEnrolment(Enrolment enrolment);
-        List<EnrolViewModel> GetAllEnrolment();
+        List<EnrolViewModel> GetAllEnrolment(int userId);
     }
 }

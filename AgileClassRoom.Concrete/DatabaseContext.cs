@@ -25,6 +25,13 @@ namespace AgileClassRoom.Concrete
         public DbSet<Course> Course { get; set; }
         public DbSet<Section> Section { get; set; }
         public DbSet<Student> Student { get; set; }
-        
+        public DbSet<Enrolment> Enrolment { get; set; }
+        public DbSet<Assessment> Assessment { get; set; }
+        public DbSet<Project> Project { get; set; }
+        public DbSet <AssignProject> AssignProject { get; set; }
+        public DbSet<Annoucement> Annoucement { get; set; }
+        public DbSet<Groups> Groups { get; set; }
+        public DbSet<GroupMembers> GroupMembers { get; set; }
+
     }
 }

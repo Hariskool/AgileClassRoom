@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AgileClassRoom.Models
+namespace AgileClassRoom.ViewModel
 {
-   public class GroupNotifications
+    public class StudentDashboardViewModel
     {
     }
 }
